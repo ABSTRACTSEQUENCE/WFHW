@@ -186,6 +186,7 @@ namespace HW3
             // plus
             // 
             this.plus.BackColor = System.Drawing.Color.DarkGray;
+            this.plus.Enabled = false;
             this.plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.plus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.plus.Location = new System.Drawing.Point(85, 336);
@@ -199,6 +200,7 @@ namespace HW3
             // minus
             // 
             this.minus.BackColor = System.Drawing.Color.DarkGray;
+            this.minus.Enabled = false;
             this.minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.minus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.minus.Location = new System.Drawing.Point(211, 336);
@@ -213,6 +215,7 @@ namespace HW3
             // equals
             // 
             this.equals.BackColor = System.Drawing.Color.DarkGray;
+            this.equals.Enabled = false;
             this.equals.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.equals.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.equals.Location = new System.Drawing.Point(85, 389);
