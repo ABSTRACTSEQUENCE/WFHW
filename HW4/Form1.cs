@@ -24,7 +24,7 @@ namespace HW4
 			InitializeComponent();
 
 			sf = new SaveFileDialog();
-			sf.Filter = "Text files |*.txt";
+			sf.Filter = "Text files |*.txt|Document |*docx";
 			sf.Title = "Сохранить как";
 			sf.FileOk += Sf_FileOk;
 

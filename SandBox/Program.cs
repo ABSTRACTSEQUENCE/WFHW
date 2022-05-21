@@ -9,8 +9,7 @@ namespace SandBox
 	{
 		static void Main(string[] args)
 		{
-			char[] chars = { '+', '-' };
-			string str = "10+10+2-1";
+			
 			
 			
 		}
