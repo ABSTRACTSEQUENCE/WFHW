@@ -1,6 +1,5 @@
-﻿using System.Windows;
-using System.Collections.Generic;
-using System.Collections;
+﻿using System.Collections.Generic;
+using System.Windows;
 
 namespace WPFListHW
 {
@@ -10,12 +9,14 @@ namespace WPFListHW
     public partial class MainWindow : Window
     {
         List<Car> cars;
-    public MainWindow()
+        public MainWindow()
         {
             InitializeComponent();
-            cars = new List<Car> { new Car("supra", 255, 250) };
-            lview.ItemsSource = cars;
-            
+            cars = new List<Car> { new Car("Toyota Supra", 255, 250) };
+            foreach (Car i in cars)
+            {
+                lview.Items.Add(i);
+            }
         }
 
         private void bt_add_Click(object sender, RoutedEventArgs e)
@@ -23,13 +24,18 @@ namespace WPFListHW
             Data data = new Data();
             data.ShowDialog();
             if (data.send != null)
-               cars.Add(data.send);
-            /*Простите за не выполненное ДЗ, я так и не понял как добавлять элементы в ListView
-             При попытке добавить напрямую вылезает исключение, если добавлять через словарь, объявленный в
-            xaml, то там при добавлении элемент добавляется в новый ключ, а наши машины находятся в ключе cars и поэтому их не будет отображать
-            При попытке добавить через список, по неизвестной для меня причине, элемент не добавляется в ListView (хотя в список добавляется спокойно)
-            */
+                lview.Items.Add(data.send);
 
+        }
+
+        private void bt_remove_Click(object sender, RoutedEventArgs e)
+        {
+            if (lview.SelectedItem == null)
+                MessageBox.Show("Элемент не выбран");
+            else
+                if (MessageBox.Show($"Вы действительно хотите удалить этот элемент?", "Внимание", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                lview.Items.Remove(lview.SelectedItem);
+            else return;
         }
     }
 

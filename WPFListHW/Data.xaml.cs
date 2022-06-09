@@ -23,11 +23,10 @@ namespace WPFListHW
         public Data()
         {
             InitializeComponent();
-            
+            send = new Car();
         }
         private void change(string what)
         {
-            send = new Car();
             switch (what.ToLower())
             {
                 case "name": 
@@ -44,6 +43,17 @@ namespace WPFListHW
                         MessageBox.Show("Доступны только числовые значения");
                     };
                     break;
+                case "max":
+                    try
+                    {
+                        send.max_speed = Convert.ToInt32(tb_speed.Text);
+                    }
+                    catch (Exception)
+                    {
+                        tb_speed.Text = "";
+                        MessageBox.Show("Допустимы только чисовые значения");
+                    }
+                    break;
 
             }
         }
@@ -57,9 +67,15 @@ namespace WPFListHW
             change("eng");
         }
 
+
         private void submit_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void tb_speed_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            change("max");
         }
     }
 }

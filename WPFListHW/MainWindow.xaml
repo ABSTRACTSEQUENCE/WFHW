@@ -4,30 +4,27 @@
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:local="clr-namespace:WPFListHW"
-        xmlns:col ="clr-namespace:System.Collections;assembly=mscorlib"
+		xmlns:col ="clr-namespace:System.Collections;assembly=mscorlib"
 		mc:Ignorable="d"
 		Title="MainWindow" Height="450" Width="800">
 	<Grid>
-        <StackPanel>
-            <ListView x:Name="lview" ItemsSource="{DynamicResource ResourceKey=cars}">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn  Header="Название" DisplayMemberBinding="{Binding Path=name}"></GridViewColumn>
-                        <GridViewColumn Header="Мощность двигателя" DisplayMemberBinding="{Binding Path=eng_power}"></GridViewColumn>
-                        <GridViewColumn Header="Максимальная скорость" DisplayMemberBinding="{Binding Path=max_speed}"></GridViewColumn>
-                    </GridView>
-                </ListView.View>
-
-                <!--<ListView.Resources>
-                    <col:ArrayList x:Key="cars" x:Name="cars">
-                        <local:Car name="Toyota Supra" eng_power="255" max_speed="250"></local:Car>
-                        <local:Car name="VAZ 2107" eng_power="100" max_speed="150"></local:Car>
-                        <local:Car name ="Mazda RX-7" eng_power="200" max_speed="200"></local:Car>
-                    </col:ArrayList>
-                </ListView.Resources>-->
-            </ListView>
-            
-                <Button x:Name="bt_add" Content="Добавить" HorizontalAlignment="Left" Width="100" Click="bt_add_Click" ></Button>
-        </StackPanel> 
-	</Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+       
+		<ListView x:Name="lview" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn  Header="Название" DisplayMemberBinding="{Binding Path=name}"></GridViewColumn>
+                    <GridViewColumn Header="Мощность двигателя" DisplayMemberBinding="{Binding Path=eng_power}"></GridViewColumn>
+                    <GridViewColumn Header="Максимальная скорость" DisplayMemberBinding="{Binding Path=max_speed}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button x:Name="bt_remove" Content="Удалить" Height="20" Width="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="bt_remove_Click"/>
+            <Button Click="bt_add_Click" x:Name="bt_add" Content="Добавить" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+    </Grid>
 </Window>

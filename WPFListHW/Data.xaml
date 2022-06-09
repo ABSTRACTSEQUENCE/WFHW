@@ -11,6 +11,9 @@
         <TextBox x:Name="tb_name" HorizontalAlignment="Left" Height="23" Margin="258,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" TextChanged="TextBox_TextChanged"/>
         <Label Content="Мощность двигателя" HorizontalAlignment="Left" Margin="152,158,0,0" VerticalAlignment="Top" FontSize="10" RenderTransformOrigin="0.491,2.957"/>
         <TextBox x:Name="tb_eng" HorizontalAlignment="Left" Height="23" Margin="258,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" RenderTransformOrigin="0.503,2.853" TextChanged="tb_eng_TextChanged"/>
-        <Button x:Name="submit" Content="Применить" HorizontalAlignment="Left" Margin="335,186,0,0" VerticalAlignment="Top" Width="75" Click="submit_Click"/>
+        <Button x:Name="submit" Content="Применить" HorizontalAlignment="Left" Margin="346,214,0,0" VerticalAlignment="Top" Width="75" Click="submit_Click"/>
+        <TextBox x:Name="tb_speed" HorizontalAlignment="Left" Height="23" Margin="258,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" TextChanged="tb_speed_TextChanged"/>
+        <Label Content="Максимальная скорость" HorizontalAlignment="Left" Margin="132,184,0,0" VerticalAlignment="Top" FontSize="10" RenderTransformOrigin="0.491,2.957"/>
+       
     </Grid>
 </Window>
