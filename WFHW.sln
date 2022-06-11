@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFSlideShowHW", "WFSlideSho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFListHW", "WPFListHW\WPFListHW.csproj", "{C8194FB5-B1FC-4982-B703-E7118EC5F229}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordBoxHW", "PasswordBoxHW\PasswordBoxHW.csproj", "{88E817B0-A6CA-416D-8035-00901D7DD141}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{C8194FB5-B1FC-4982-B703-E7118EC5F229}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8194FB5-B1FC-4982-B703-E7118EC5F229}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8194FB5-B1FC-4982-B703-E7118EC5F229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E817B0-A6CA-416D-8035-00901D7DD141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E817B0-A6CA-416D-8035-00901D7DD141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E817B0-A6CA-416D-8035-00901D7DD141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E817B0-A6CA-416D-8035-00901D7DD141}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
