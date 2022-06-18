@@ -14,140 +14,79 @@
             <Setter Property="ItemsControl.Width" Value="37"/>
             <Setter Property="ItemsControl.Foreground" Value="White"/>
         </Style>
-
     </Window.Resources>
-    <Grid x:Name="g_main">
+    <Grid x:Name="g_main" >
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-
-            <RowDefinition/>
-            <RowDefinition/>
-
-            <RowDefinition/>
-            <RowDefinition/>
-
-            <RowDefinition/>
+            <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <TextBox x:Name="tb" Width="300" Height="20" Grid.Row="0"/>
+        <StackPanel Grid.Row="1">
+            <StackPanel Margin="0,0,0,11" x:Name="r_1" Grid.Row="1" Orientation="Horizontal">
 
-        <TextBox x:Name="tb" Grid.Row="2" Width="300" Height="20" TextChanged="TextBox_TextChanged"></TextBox>
+                <Button Content="`" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="1" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="2" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="3" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="4" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="5" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="6" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="7" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="8" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="9" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="0" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="-" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="=" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="Bck" Style="{StaticResource ResourceKey=style}" Width="100"/>
+            </StackPanel>
+            <StackPanel x:Name="r_2" Grid.Row="1" Orientation="Horizontal" >
+                <Button Width="56" Content="TAB" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="Q" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="W" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="E" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="R" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="T" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="Y" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="U" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="I" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="O" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="P" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="[" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="]" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="\" Style="{StaticResource ResourceKey=style}"/>
+            </StackPanel>
+            <StackPanel x:Name="r_3" Margin="0,11,0,0" Grid.Row="1" Orientation="Horizontal">
+                <Button Width="75" Content="CAPS" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="A" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="S" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="D" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="F" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="G" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="H" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="J" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="K" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="L" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content=";" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="'" Style="{StaticResource ResourceKey=style}"/>
+                <Button Width="100" Content="ENTER" Style="{StaticResource ResourceKey=style}"/>
+            </StackPanel>
+            <StackPanel x:Name="r_4" Grid.Row="1" Orientation="Horizontal" Margin="0,11,0,0">
+                <Button Width="100" Style="{StaticResource ResourceKey=style}" Content="SHIFT"/>
+                <Button Content="Z" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="X" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="C" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="V" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="B" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="N" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="M" Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="," Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="." Style="{StaticResource ResourceKey=style}"/>
+                <Button Content="/" Style="{StaticResource ResourceKey=style}"/>
+                <Button Width="100" Style="{StaticResource ResourceKey=style}" Content="SHIFT"/>
+            </StackPanel>
 
-        <Grid x:Name="g_1" Grid.Row="3">
-            <!--<Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+        </StackPanel>
 
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>-->
-            <Button Width="100" Content="TAB" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="`" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="1" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="2" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="3" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="4" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="5" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="6" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="7" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="8" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="9" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="0" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="-" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="=" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="Bck" Style="{StaticResource ResourceKey=style}"/>
-        </Grid>
-
-        <Grid Grid.Row="4" x:Name="g_2">
-            <!--<Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-            </Grid.ColumnDefinitions>-->
-            <Button Width="100" Content="CAPS" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="Q" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="W" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="E" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="R" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="T" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="Y" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="U" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="I" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="O" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="P" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="[" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="]" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="\" Style="{StaticResource ResourceKey=style}"/>
-        </Grid>
-
-        <Grid Grid.Row="5" x:Name="g_3">
-            <!--<Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>-->
-            <Button Content="A" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="S" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="D" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="F" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="G" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="H" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="J" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="K" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="L" Style="{StaticResource ResourceKey=style}"/>
-            <Button Width="100" Content="ENTER" Style="{StaticResource ResourceKey=style}"/>
-        </Grid>
-
-        <Grid Grid.Row="6" x:Name="g_4">
-            <Button Width="200" Style="{StaticResource ResourceKey=style}" Content="SHIFT"/>
-            <Button Content="Z" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="X" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="C" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="V" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="B" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="N" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="M" Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="," Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="." Style="{StaticResource ResourceKey=style}"/>
-            <Button Content="/" Style="{StaticResource ResourceKey=style}"/>
-        </Grid>
-
-        <Button Content="SPACEBAR" Style="{StaticResource ResourceKey= style}" x:Name="bt_space" Grid.Row="7" Height="34" Width="500"/>
+        <Button Content="SPACEBAR" Style="{StaticResource ResourceKey= style}" x:Name="bt_space" Grid.Row="1" Height="Auto" Width="Auto" Margin="235,185,381,103"/>
     </Grid>
 </Window>

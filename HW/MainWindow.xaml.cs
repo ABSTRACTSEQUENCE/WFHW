@@ -15,17 +15,18 @@ namespace HW
         {
             InitializeComponent();
             buttons = new List<Button>();
-            add_columns(g_1);
-            add_columns(g_2);
-            add_columns(g_3);
-            add_columns(g_4);
+            add_buttons(r_1);
+            add_buttons(r_2);
+            add_buttons(r_3);
+            add_buttons(r_4);
             foreach (Button button in buttons)
             {
                 SolidColorBrush bruh = new SolidColorBrush();
-                string[] red = { "`", "1", "2", "Q", "A", "Z", "9", "I", "K", ","};
+                string[] red = { "`", "1", "2", "Q", "A", "Z", "9", "I", "K", "," };
                 string[] yellow = { "3", "W", "S", "X", "0", "O", "L", "." };
-                string[] green = { "E", "D", "C", "-", "=", "[", "]", "\\", "Y", "U", "H", "J", "N", "M" };
+                string[] green = { "4", "E", "D", "C","P", "-", "=", "[", "]", "\\", ";", "'", "/" };
                 string[] blue = { "5", "6", "R", "T", "F", "G", "V", "B" };
+                string[] purple = { "Y", "U", "H", "J", "N", "M", "7","8"};
                 for (int i = 0; i < red.Length; i++)
                     if (button.Content.ToString() == red[i])
                     {
@@ -43,8 +44,8 @@ namespace HW
                         button.Background = bruh;
                     }
 
-                for(int i =0;i<green.Length; i++)
-                    if(button.Content.ToString() == green[i])
+                for (int i = 0; i < green.Length; i++)
+                    if (button.Content.ToString() == green[i])
                     {
                         bruh.Color = Colors.Green;
                         button.Background = bruh;
@@ -57,24 +58,30 @@ namespace HW
                         button.Background = bruh;
                     }
 
+                for (int i = 0; i < red.Length; i++)
+                    if (button.Content.ToString() == red[i])
+                    {
+                        bruh.Color = Colors.Red;
+                        button.Background = bruh;
+                    }
 
+                for (int i = 0; i < purple.Length; i++)
+                    if (button.Content.ToString() == purple[i])
+                    {
+                        bruh.Color = Colors.Purple;
+                        button.Background = bruh;
+                    }
 
             }
+
         }
-        private void add_columns(Grid grid)
+        private void add_buttons(StackPanel sp)
         {
-            for (int i = 0; i < grid.Children.Count; i++)
+            for (int i = 0; i < sp.Children.Count; i++)
             {
-                ColumnDefinition cd = new ColumnDefinition();
-                grid.ColumnDefinitions.Add(cd);
-                Grid.SetColumn(grid.Children[i], i);
-                buttons.Add((Button)grid.Children[i]);
+                buttons.Add((Button)sp.Children[i]);
             }
         }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-    }
+     
+    } 
 }
