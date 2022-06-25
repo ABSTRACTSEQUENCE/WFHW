@@ -159,7 +159,7 @@ namespace HW
 
         private void t_length_TextChanged(object sender, TextChangedEventArgs e)
         {
-            for (int i = 0; i <= 9; i++) 
+            for (int i = 1; i <= 9; i++) 
             {
                 if (t_length.Text == i.ToString()) 
                 {
