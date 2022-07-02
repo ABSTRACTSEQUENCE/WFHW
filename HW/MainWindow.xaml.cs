@@ -18,7 +18,6 @@ namespace HW
         string[][] colors;
         System.Windows.Forms.Timer timer;
         System.Random rand = new System.Random();
-        System.EventArgs args = new System.EventArgs();
         
         public MainWindow()
         {
@@ -48,13 +47,11 @@ namespace HW
                 sec = 0;
             }
             else sec++;
-            time.Content = $"{min}:{sec}";
-            //timer.Interval=1000;
-            
+            time.Content = $"{min}:{sec}";           
         }
         private string generate()
         {
-            string add = "";
+            string add;
             string str ="";
             for (int i = 0; i < length; i++)
             {
@@ -71,9 +68,6 @@ namespace HW
         {
             foreach (Button button in buttons)
             {
-                SolidColorBrush bruh = new SolidColorBrush();
-                button.Background = bruh;
-
                 for (int i = 0; i < colors.Length; i++)
                     for (int j = 0; j < colors[i].Length; j++)
                         if (button.Content.ToString() == colors[i][j])
@@ -96,9 +90,6 @@ namespace HW
                                     button.Background = new SolidColorBrush(Colors.Blue);
                                     break;
                             }
-                if (button.Background == bruh)
-                    bruh.Color = Colors.Gray;
-
             }
         }
 
@@ -148,7 +139,6 @@ namespace HW
                 time.Content = "0:0";
                 timer.Start();
                 timer.Interval = 1000;
-                //timer.Interval = System.TimeSpan.FromSeconds(1);
                 sucessful_count = 0;
                 l_succesful.Content = sucessful_count;
                 start.Content = "stop";
